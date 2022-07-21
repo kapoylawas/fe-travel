@@ -84,7 +84,7 @@ const LayoutAdmin =({children}) =>{
     const logoutHandler = async (e) => {
         e.preventDefault();
 
-        await Api.post('/api/admin/logout', null, {
+        await Api.post('admin/logout', null, {
             headers: {
                 
                 //header Bearer + Token
