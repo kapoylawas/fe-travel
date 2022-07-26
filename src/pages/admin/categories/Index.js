@@ -74,7 +74,6 @@ function CategoriesIndex() {
 
       //total
       setTotal(response.data.data.total);
-      console.log("data", response);
     });
   };
 
@@ -187,6 +186,12 @@ function CategoriesIndex() {
                           </td>
                           <td>{category.name}</td>
                           <td className="text-center">
+                            <Link
+                              to={`/admin/categories/edit/${category.id}`}
+                              className="btn btn-sm btn-primary me-2"
+                            >
+                              <i className="fa fa-pencil-alt"></i>
+                            </Link>
                             <button
                               onClick={() => deleteCategory(category.id)}
                               className="btn btn-sm btn-danger"

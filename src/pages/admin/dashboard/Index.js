@@ -110,7 +110,7 @@ function Dashboard() {
                                 <div>
                                     <div className="text-value text-primary"> {users} </div>
                                     <div className="text-muted text-uppercase font-weight-bold small">
-                                        Sliders
+                                        User
                                     </div>
                                 </div>
                             </div>
