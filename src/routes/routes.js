@@ -18,6 +18,7 @@ import Dashboard from '../pages/admin/dashboard/Index';
 import CategoriesIndex from '../pages/admin/categories/Index';
 import CategoriesCreate from "../pages/admin/categories/Create";
 import CategoryEdit from "../pages/admin/categories/Edit";
+import PlacesIndex from "../pages/admin/places/Index";
 
 function Routes() {
     return (
@@ -44,6 +45,10 @@ function Routes() {
 
             <PrivateRoute exact path="/admin/categories/edit/:id">
                 <CategoryEdit /> 
+            </PrivateRoute>
+
+            <PrivateRoute exact path="/admin/places">
+                <PlacesIndex /> 
             </PrivateRoute>
 
         </Switch>
