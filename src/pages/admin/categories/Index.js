@@ -24,13 +24,12 @@ import { confirmAlert } from "react-confirm-alert";
 
 //import CSS react-confirm-alert
 import "react-confirm-alert/src/react-confirm-alert.css"; // Import css
-import { logDOM } from "@testing-library/react";
 
 function CategoriesIndex() {
   //title page
   document.title = "Categories - Administrator Travel GIS";
 
-  //state posts
+  //state categories
   const [categories, setCategories] = useState([]);
 
   //state currentPage
