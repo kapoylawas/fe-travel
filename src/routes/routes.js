@@ -27,10 +27,12 @@ import UsersIndex from "../pages/admin/users/Index";
 import UserCreate from "../pages/admin/users/Create";
 import UserEdit from "../pages/admin/users/Edit";
 
+// import web
+import Home from "../pages/web/home";
+
 function Routes() {
   return (
     <Switch>
-        
       {/* route "/adminlogin" */}
       <Route exact path="/admin/login">
         <Login />
@@ -86,6 +88,10 @@ function Routes() {
         <UserEdit />
       </PrivateRoute>
 
+      {/* route web */}
+      <Route exact path="/">
+        <Home />
+      </Route>
     </Switch>
   );
 }
