@@ -28,7 +28,7 @@ import UserCreate from "../pages/admin/users/Create";
 import UserEdit from "../pages/admin/users/Edit";
 
 // import web
-import Home from "../pages/web/home";
+import Home from "../pages/web/home/Index";
 
 function Routes() {
   return (

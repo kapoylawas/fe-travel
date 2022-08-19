@@ -16,7 +16,7 @@ function Slider() {
     const fetchDataSliders = async () => {
 
         //fetching Rest API "sliders"
-        await Api.get('/api/web/sliders')
+        await Api.get('/web/sliders')
             .then((response) => {
 
                 //set data to state
