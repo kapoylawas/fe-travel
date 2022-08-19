@@ -29,6 +29,7 @@ import UserEdit from "../pages/admin/users/Edit";
 
 // import web
 import Home from "../pages/web/home/Index";
+import WebCategoryShow from "../pages/web/categories/Show";
 
 function Routes() {
   return (
@@ -91,6 +92,10 @@ function Routes() {
       {/* route web */}
       <Route exact path="/">
         <Home />
+      </Route>
+
+      <Route exact path="/category/:slug">
+        <WebCategoryShow />
       </Route>
     </Switch>
   );

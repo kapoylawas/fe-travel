@@ -37,7 +37,6 @@ function WebHeader() {
         .then((response) => {
             //set data to state
             setCategories(response.data.data);
-            console.log("data categories :", response);
         });
     }
 
