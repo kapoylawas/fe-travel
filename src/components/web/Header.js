@@ -53,7 +53,6 @@ function WebHeader() {
         .then((response) => {
             //set data to state
             setUser(response.data);
-            console.log("data user :", response);
         });
     }
 

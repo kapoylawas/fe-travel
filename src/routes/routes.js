@@ -30,6 +30,8 @@ import UserEdit from "../pages/admin/users/Edit";
 // import web
 import Home from "../pages/web/home/Index";
 import WebCategoryShow from "../pages/web/categories/Show";
+import WebPlacesIndex from "../pages/web/places/Index";
+import WebPlacesShow from "../pages/web/places/Show";
 
 function Routes() {
   return (
@@ -97,6 +99,15 @@ function Routes() {
       <Route exact path="/category/:slug">
         <WebCategoryShow />
       </Route>
+
+      <Route exact path="/places">
+        <WebPlacesIndex />
+      </Route>
+
+      <Route exact path="/places/:slug">
+        <WebPlacesShow />
+      </Route>
+
     </Switch>
   );
 }
