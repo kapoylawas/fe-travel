@@ -84,10 +84,10 @@ function WebPlacesDirection() {
                         <div className="col-md-12 mb-5">
                             <div className="card border-0 rounded shadow-sm">
                               <div className="card-body">
-                                <Link to={`/places/${slug}`} className="float-end btn btn-success btn-sm mb-2"><i className="fa fa-long-arrow-alt-left"></i> BACK TO PLACE</Link>
+                                <Link to={`/places`} className="float-end btn btn-success btn-sm mb-2"><i className="fa fa-long-arrow-alt-left"></i> BACK TO PLACE</Link>
                                 <h5><i className="fa fa-location-arrow"></i> DIRECTION FROM USER LOCATION</h5>
                                 <hr />
-                                <div ref={mapContainer} className="map-container" style={{ height: "400px" }} />
+                                <div ref={mapContainer} className="map-container" style={{ height: "500px" }} />
                               </div>
                             </div>
                         </div>
@@ -96,7 +96,6 @@ function WebPlacesDirection() {
             </LayoutWeb>
         </React.Fragment>
     )
-
 }
 
 export default WebPlacesDirection;

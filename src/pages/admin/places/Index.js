@@ -51,7 +51,7 @@ function PlacesIndex() {
     const searchQuery = searchData ? searchData : search;
 
     //fetching data from Rest API
-    await Api.get(`/admin/place?q=${searchQuery}`, {
+    await Api.get(`/admin/place?q=${searchQuery}&page=${page}`, {
       headers: {
         //header Bearer + Token
         Authorization: `Bearer ${token}`,

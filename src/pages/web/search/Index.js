@@ -1,42 +1,59 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Api from "../../../api";
 import CardPlace from "../../../components/utilities/CardPlace";
 import PaginationComponent from "../../../components/utilities/Pagination";
+//import layout web
 import LayoutWeb from "../../../layouts/Web";
 
-function WebPlacesIndex() {
+function WebSearch() {
   document.title =
-    "Places -  TRAVEL GIS - Website Wisata Berbasis GIS (Geographic Information System)";
+    "Search - TRAVEL GIS - Website Wisata Berbasis GIS (Geographic Information System)";
 
+  //state places
   const [places, setPlaces] = useState([]);
 
-  // PAGINATION
+  //state currentPage
   const [currentPage, setCurrentPage] = useState(1);
+
   //state perPage
   const [perPage, setPerPage] = useState(0);
+
   //state total
   const [total, setTotal] = useState(0);
 
-  const fetchDataPlaces = async (pageNumber) => {
+  //query params
+  const query = new URLSearchParams(useLocation().search);
+
+  const fetchDataPlace = async (pageNumber) => {
+    //define variable "page"
     const page = pageNumber ? pageNumber : currentPage;
 
-    await Api.get(`web/places?page=${page}`).then((response) => {
-      setPlaces(response.data.data.data);
+    //fetching Rest API
+    await Api.get(`/web/places?q=${query.get("q")}&page=${page}`).then(
+      (response) => {
+        //set data to state "places"
+        setPlaces(response.data.data.data);
 
-      setCurrentPage(response.data.data.current_page);
+        //set currentPage
+        setCurrentPage(response.data.data.current_page);
 
-      setPerPage(response.data.data.per_page);
+        //set perPage
+        setPerPage(response.data.data.per_page);
 
-      setTotal(response.data.data.total);
-    });
+        //total
+        setTotal(response.data.data.total);
+      }
+    );
   };
 
   useEffect(() => {
-    //call function "fetchDataPlaces"
-    fetchDataPlaces();
+    //call function "fetchDataPlace"
+    fetchDataPlace();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [query.get("q")]);
 
   return (
     <React.Fragment>
@@ -67,7 +84,7 @@ function WebPlacesIndex() {
             currentPage={currentPage}
             perPage={perPage}
             total={total}
-            onChange={(pageNumber) => fetchDataPlaces(pageNumber)}
+            onChange={(pageNumber) => fetchDataPlace(pageNumber)}
             position="center"
           />
         </div>
@@ -76,4 +93,4 @@ function WebPlacesIndex() {
   );
 }
 
-export default WebPlacesIndex;
+export default WebSearch;

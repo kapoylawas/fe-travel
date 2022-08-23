@@ -11,6 +11,7 @@ function WebCategoryShow() {
 
     //get params from url
     const { slug } = useParams();
+    
 
     const fetchDataCategory = async () => {
         await Api.get(`/web/categories/${slug}`)
@@ -25,8 +26,12 @@ function WebCategoryShow() {
     }
 
     useEffect(() => {
-        fetchDataCategory()
-    }, [slug])
+
+        //call function "fetchDataCategory"
+        fetchDataCategory();
+            
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [slug]);
 
     return(
         <React.Fragment>

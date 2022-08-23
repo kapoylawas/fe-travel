@@ -23,7 +23,7 @@ function UsersIndex() {
     const searchQuery = searchData ? searchData : search;
     const page = pageNumber ? pageNumber : currentPage;
 
-    await Api.get(`/admin/users?q=${searchQuery}`, {
+    await Api.get(`/admin/users?q=${searchQuery}&page=${page}`, {
       headers: {
         //header Bearer + Token
         Authorization: `Bearer ${token}`,

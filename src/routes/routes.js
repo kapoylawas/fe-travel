@@ -33,6 +33,8 @@ import WebCategoryShow from "../pages/web/categories/Show";
 import WebPlacesIndex from "../pages/web/places/Index";
 import WebPlacesShow from "../pages/web/places/Show";
 import WebPlaceDirection from "../pages/web/places/Direction";
+import WebMapsIndex from "../pages/web/maps/Index";
+import WebSearch from "../pages/web/search/Index";
 
 function Routes() {
   return (
@@ -116,7 +118,15 @@ function Routes() {
       <Route exact path="/places/:slug/direction">
         <WebPlaceDirection />
       </Route>
-      
+
+      <Route exact path="/maps">
+        <WebMapsIndex />
+      </Route>
+
+      <Route exact path="/search">
+        <WebSearch />
+      </Route>
+
     </Switch>
   );
 }
