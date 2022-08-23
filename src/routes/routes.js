@@ -32,6 +32,7 @@ import Home from "../pages/web/home/Index";
 import WebCategoryShow from "../pages/web/categories/Show";
 import WebPlacesIndex from "../pages/web/places/Index";
 import WebPlacesShow from "../pages/web/places/Show";
+import WebPlaceDirection from "../pages/web/places/Direction";
 
 function Routes() {
   return (
@@ -108,6 +109,14 @@ function Routes() {
         <WebPlacesShow />
       </Route>
 
+      <Route exact path="/places/:slug/direction">
+        <WebPlaceDirection />
+      </Route>
+
+      <Route exact path="/places/:slug/direction">
+        <WebPlaceDirection />
+      </Route>
+      
     </Switch>
   );
 }
