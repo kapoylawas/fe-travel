@@ -31,8 +31,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build-production": "webpack -p --define process.env.NODE_ENV='\"production\"' --progress --colors"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
