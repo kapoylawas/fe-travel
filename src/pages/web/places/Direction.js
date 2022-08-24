@@ -4,7 +4,7 @@ import LayoutWeb from "../../../layouts/Web";
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 //import mapbox gl direction
 import Directions from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions';
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 //api key mapbox
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX;
 
@@ -16,8 +16,6 @@ function WebPlacesDirection() {
 
     const [longitude, setLongitude] = useState(112.7260712)
     const [latitude, setLatitude] = useState(-7.4593095)
-
-    const {slug} = useParams
 
     const query = new URLSearchParams(useLocation().search);
     

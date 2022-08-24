@@ -54,5 +54,8 @@
   },
   "devDependencies": {
     "webpack-cli": "^4.10.0"
+  },
+  "resolutions": {
+    "autoprefixer": "10.4.5"
   }
 }
