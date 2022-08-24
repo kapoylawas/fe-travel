@@ -33,7 +33,7 @@ function Slider() {
     }, []);
 
     return (
-        <Carousel prevIcon={<i className="fa fa-chevron-left fa-lg carousel-custom text-dark shadow"></i>} nextIcon={<i className="fa fa-chevron-right fa-lg carousel-custom text-dark shadow"></i>}>
+        <Carousel autoPlay={true} prevIcon={<i className="fa fa-chevron-left fa-lg carousel-custom text-dark shadow"></i>} nextIcon={<i className="fa fa-chevron-right fa-lg carousel-custom text-dark shadow"></i>}>
             {sliders.map((slider) => (
                 <Carousel.Item key={slider.id}>
                     <img className="d-block w-100" src={slider.image} style={{ height: "500px", objectFit: "cover" }}  alt="First slide"/>

@@ -122,7 +122,7 @@ function WebPlaceShow() {
                     <i className="fa fa-map-marker"></i> <i>{place.address}</i>
                   </span>
                   <hr />
-                  <ImageGallery items={images} />
+                  <ImageGallery items={images} autoPlay={true} />
                   <div
                     dangerouslySetInnerHTML={{ __html: place.description }}
                   />
